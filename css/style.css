@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&family=Barlow+Condensed:wght@700;900&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --gold: #C9962A;
+  --gold-light: #F0C050;
+  --red: #D72B2B;
+  --black: #060606;
+  --dark: #0E0E0E;
+  --surface: #141414;
+  --surface2: #1C1C1C;
+  --text: #F0EDE6;
+  --muted: #888;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--text); font-family: 'Barlow', sans-serif; overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 3rem;
+  background: rgba(6,6,6,0.97);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(201,150,42,0.1);
+}
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.nav-logo img { width: 52px; height: 52px; object-fit: contain; border-radius: 50%; }
+.nav-logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.1em; color: var(--gold-light); line-height: 1; }
+.nav-logo-text span { color: var(--red); display: block; }
+.nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+.nav-links a { font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+.nav-book { background: var(--red) !important; color: #fff !important; padding: 0.5rem 1.4rem; border-radius: 2px; }
+.nav-book:hover { background: #b02020 !important; }
+
+/* ── HAMBURGER (mobile) ── */
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
+
+/* ── BUTTONS ── */
+.btn { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; padding: 0.75rem 2rem; border-radius: 2px; transition: all 0.2s; cursor: pointer; border: none; }
+.btn-gold { background: var(--gold); color: var(--black); }
+.btn-gold:hover { background: var(--gold-light); }
+.btn-outline { background: transparent; border: 1.5px solid rgba(255,255,255,0.3); color: var(--text); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ── SECTION SHARED ── */
+section { padding: 7rem 4rem; }
+.section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.4em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem; }
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: 0.05em; line-height: 1; color: #fff; }
+.divider { width: 60px; height: 3px; background: linear-gradient(90deg, var(--gold), var(--red)); margin: 1rem 0 3rem; border-radius: 2px; }
+
+/* ── PAGE HEADER (inner pages) ── */
+.page-header {
+  padding: 10rem 4rem 5rem;
+  background: linear-gradient(to bottom, rgba(6,6,6,0.8) 0%, var(--dark) 100%);
+  border-bottom: 1px solid rgba(201,150,42,0.15);
+  text-align: center;
+}
+.page-header .section-label { display: block; }
+.page-header .section-title { font-size: clamp(3rem, 8vw, 6rem); }
+
+/* ── FORMS ── */
+.form-group { margin-bottom: 1.2rem; }
+label { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+input, textarea, select { width: 100%; background: var(--surface); border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; padding: 0.8rem 1rem; color: var(--text); font-family: 'Barlow', sans-serif; font-size: 0.95rem; outline: none; transition: border-color 0.2s; }
+input:focus, textarea:focus, select:focus { border-color: var(--gold); }
+textarea { resize: vertical; min-height: 110px; }
+select option { background: var(--surface2); }
+
+/* ── FOOTER ── */
+footer { background: var(--surface); border-top: 1px solid rgba(201,150,42,0.15); padding: 2.5rem 4rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-brand { display: flex; align-items: center; gap: 0.75rem; }
+.footer-brand img { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; }
+.footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.1em; color: var(--gold-light); }
+.footer-logo span { color: var(--red); }
+footer p { font-size: 0.8rem; color: var(--muted); }
+.footer-links { display: flex; gap: 1.5rem; list-style: none; }
+.footer-links a { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; color: var(--muted); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+.footer-links a:hover { color: var(--gold-light); }
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── SUCCESS MSG ── */
+.success-msg { text-align: center; color: var(--gold-light); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.1em; padding: 2rem 0; }
+.success-msg small { display: block; font-size: 0.9rem; font-family: 'Barlow', sans-serif; font-weight: 300; color: var(--muted); margin-top: 0.5rem; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(6,6,6,0.98); padding: 1.5rem 2rem; gap: 1.25rem; border-bottom: 1px solid rgba(201,150,42,0.15); }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: flex; }
+  section { padding: 5rem 1.5rem; }
+  .page-header { padding: 8rem 1.5rem 3rem; }
+  footer { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; }
+}

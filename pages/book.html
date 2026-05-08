@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book DJ Riddim Ridder</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .book-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 960px; }
+  .book-info p { font-size: 1rem; line-height: 1.8; color: rgba(240,237,230,0.7); margin-bottom: 2rem; }
+  .book-detail { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; font-size: 0.9rem; }
+  .book-detail .icon { font-size: 1.2rem; }
+  .book-detail span { color: var(--muted); }
+  .rates-table { width: 100%; border-collapse: collapse; margin-top: 2rem; max-width: 480px; }
+  .rates-table th, .rates-table td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.07); font-size: 0.9rem; }
+  .rates-table th { font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); font-size: 0.78rem; }
+  .rates-table td:last-child { color: var(--gold-light); font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; }
+  @media (max-width: 768px) { .book-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img class="site-logo" src="" alt="DJ Riddim Ridder">
+    <div class="nav-logo-text">DJ Riddim<span>Ridder</span></div>
+  </a>
+  <button class="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html" class="nav-book">Book Now</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <span class="section-label">Make It Happen</span>
+  <h1 class="section-title">Book DJ Riddim Ridder</h1>
+</div>
+
+<section style="background: var(--dark);">
+  <div class="book-grid">
+    <!-- Info side -->
+    <div class="reveal">
+      <p>Ready to bring the riddim to your event? Whether it's a private party, club night, carnival, or corporate event — DJ Riddim Ridder delivers an unforgettable experience every time.</p>
+
+      <div class="book-detail"><span class="icon">📍</span><span>Available Worldwide</span></div>
+      <div class="book-detail"><span class="icon">🎧</span><span>Dancehall · Reggae · Soca · Afrobeats</span></div>
+      <div class="book-detail"><span class="icon">📅</span><span>Advance booking recommended</span></div>
+      <div class="book-detail"><span class="icon">⚡</span><span>Response within 24 hours</span></div>
+      <div class="book-detail"><span class="icon">🌍</span><span>International bookings welcome</span></div>
+
+      <table class="rates-table">
+        <thead>
+          <tr><th>Event Type</th><th>Duration</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Private Party</td><td>2–4 hrs</td></tr>
+          <tr><td>Club Night</td><td>3–5 hrs</td></tr>
+          <tr><td>Festival / Carnival</td><td>1–3 hrs</td></tr>
+          <tr><td>Corporate Event</td><td>2–4 hrs</td></tr>
+          <tr><td>Custom Package</td><td>TBD</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Form side -->
+    <div class="reveal">
+      <form data-form="booking">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" placeholder="Full name" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" name="phone" placeholder="+1 (000) 000-0000">
+        </div>
+        <div class="form-group">
+          <label>Event Type</label>
+          <select name="type">
+            <option>Private Party</option>
+            <option>Club / Venue Night</option>
+            <option>Carnival / Festival</option>
+            <option>Corporate Event</option>
+            <option>Wedding / Celebration</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Event Date</label>
+          <input type="date" name="date">
+        </div>
+        <div class="form-group">
+          <label>Location / City</label>
+          <input type="text" name="location" placeholder="City, Country">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell me about your event — expected attendance, venue, vibe..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%; font-size:1rem;">Send Booking Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <img class="site-logo" src="" alt="DJ Riddim Ridder">
+    <div class="footer-logo">DJ Riddim <span>Ridder</span></div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html">Book</a></li>
+  </ul>
+  <p>© 2025 DJ Riddim Ridder · All Rights Reserved</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

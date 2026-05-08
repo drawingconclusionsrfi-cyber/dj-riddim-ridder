@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events — DJ Riddim Ridder</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+  .video-card { background: var(--surface); border-radius: 4px; overflow: hidden; border: 1px solid rgba(201,150,42,0.12); transition: transform 0.25s, border-color 0.25s; }
+  .video-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+  .video-thumb { width: 100%; aspect-ratio: 16/9; background: var(--surface2); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .video-thumb video { width: 100%; height: 100%; object-fit: cover; }
+  .video-placeholder-text { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-align: center; padding: 1rem; }
+  .play-btn { position: absolute; width: 52px; height: 52px; border-radius: 50%; background: rgba(215,43,43,0.85); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s; cursor: pointer; }
+  .video-card:hover .play-btn { opacity: 1; }
+  .play-btn::after { content: ''; border: 9px solid transparent; border-left: 15px solid #fff; margin-left: 4px; }
+  .video-info { padding: 1rem 1.25rem; }
+  .video-info h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; }
+  .video-info p { font-size: 0.8rem; color: var(--muted); margin-top: 0.3rem; }
+  .upload-zone { border: 2px dashed rgba(201,150,42,0.3); border-radius: 6px; padding: 3rem 2rem; text-align: center; max-width: 600px; margin: 3rem auto 0; cursor: pointer; transition: border-color 0.2s; }
+  .upload-zone:hover { border-color: var(--gold); }
+  .upload-zone h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .upload-zone p { font-size: 0.85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img class="site-logo" src="" alt="DJ Riddim Ridder">
+    <div class="nav-logo-text">DJ Riddim<span>Ridder</span></div>
+  </a>
+  <button class="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html" class="nav-book">Book Now</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <span class="section-label">Live &amp; In The Mix</span>
+  <h1 class="section-title">Dancehall Events</h1>
+</div>
+
+<section style="background: var(--dark);">
+  <div class="reveal">
+    <p style="max-width:600px; color:var(--muted); line-height:1.8; margin-bottom:3rem;">
+      From Kingston to Miami, DJ Riddim Ridder brings the heat every time. Watch the highlights from recent events and festivals — more videos dropping soon.
+    </p>
+  </div>
+
+  <div class="events-grid reveal">
+    <div class="video-card">
+      <div class="video-thumb"><p class="video-placeholder-text">Event Video Coming Soon</p><div class="play-btn"></div></div>
+      <div class="video-info"><h3>Riddim Takeover Vol. 1</h3><p>Kingston, Jamaica · 2025</p></div>
+    </div>
+    <div class="video-card">
+      <div class="video-thumb"><p class="video-placeholder-text">Event Video Coming Soon</p><div class="play-btn"></div></div>
+      <div class="video-info"><h3>Summer Bashment Rave</h3><p>Miami, FL · 2025</p></div>
+    </div>
+    <div class="video-card">
+      <div class="video-thumb"><p class="video-placeholder-text">Event Video Coming Soon</p><div class="play-btn"></div></div>
+      <div class="video-info"><h3>Carnival Weekend Set</h3><p>New York, NY · 2025</p></div>
+    </div>
+    <div class="video-card">
+      <div class="video-thumb"><p class="video-placeholder-text">Event Video Coming Soon</p><div class="play-btn"></div></div>
+      <div class="video-info"><h3>Soca Fete 2025</h3><p>Toronto, Canada · 2025</p></div>
+    </div>
+    <div class="video-card">
+      <div class="video-thumb"><p class="video-placeholder-text">Event Video Coming Soon</p><div class="play-btn"></div></div>
+      <div class="video-info"><h3>Afrobeats Night</h3><p>London, UK · 2025</p></div>
+    </div>
+    <div class="video-card">
+      <div class="video-thumb"><p class="video-placeholder-text">Event Video Coming Soon</p><div class="play-btn"></div></div>
+      <div class="video-info"><h3>Reggae Sunset Festival</h3><p>Nassau, Bahamas · 2025</p></div>
+    </div>
+  </div>
+
+  <div class="upload-zone reveal" onclick="document.getElementById('videoUpload').click()">
+    <input type="file" id="videoUpload" accept="video/*" style="display:none" multiple>
+    <div style="font-size:2.5rem; margin-bottom:0.75rem;">🎬</div>
+    <h3>Submit Your Event Footage</h3>
+    <p>Upload MP4, MOV, or AVI files to be featured</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <img class="site-logo" src="" alt="DJ Riddim Ridder">
+    <div class="footer-logo">DJ Riddim <span>Ridder</span></div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html">Book</a></li>
+  </ul>
+  <p>© 2025 DJ Riddim Ridder · All Rights Reserved</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

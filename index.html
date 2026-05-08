@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ Riddim Ridder — Official Site</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  #home { position: relative; width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; background: #000; overflow: hidden; }
+  .yt-iframe-wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+  .yt-iframe-wrap iframe { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 177.78vh; height: 56.25vw; min-width: 100%; min-height: 100%; opacity: 0.75; border: none; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(6,6,6,0.2) 0%, rgba(6,6,6,0.05) 40%, rgba(6,6,6,0.88) 100%); }
+  .hero-content { position: relative; z-index: 2; text-align: center; animation: fadeUp 1.2s ease both; }
+  .hero-logo-badge { width: min(160px, 28vw); margin: 0 auto 1.5rem; filter: drop-shadow(0 0 28px rgba(201,150,42,0.6)); }
+  .hero-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+  .hero-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 11vw, 9rem); line-height: 0.9; letter-spacing: 0.04em; color: #fff; }
+  .hero-name span { color: var(--red); }
+  .hero-sub { margin-top: 1.2rem; font-size: 0.9rem; font-weight: 300; letter-spacing: 0.28em; text-transform: uppercase; color: var(--muted); }
+  .hero-cta { margin-top: 2.2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+
+  /* About strip */
+  .about-strip { background: var(--dark); padding: 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .about-strip img { width: 100%; max-width: 400px; border-radius: 4px; opacity: 0.9; filter: drop-shadow(0 0 30px rgba(201,150,42,0.2)); }
+  .about-strip p { font-size: 1.05rem; line-height: 1.9; color: rgba(240,237,230,0.75); margin-bottom: 1.5rem; }
+  @media (max-width: 768px) { .about-strip { grid-template-columns: 1fr; gap: 2rem; } .about-strip img { margin: 0 auto; display: block; } }
+
+  /* Video section */
+  #videos { background: var(--black); }
+  .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+  .video-card { background: var(--surface); border-radius: 4px; overflow: hidden; border: 1px solid rgba(201,150,42,0.12); transition: transform 0.25s, border-color 0.25s; }
+  .video-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+  .video-thumb { width: 100%; aspect-ratio: 16/9; background: var(--surface2); display: flex; align-items: center; justify-content: center; position: relative; }
+  .video-placeholder-text { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-align: center; padding: 1rem; }
+  .play-btn { position: absolute; width: 52px; height: 52px; border-radius: 50%; background: rgba(215,43,43,0.85); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s; }
+  .video-card:hover .play-btn { opacity: 1; }
+  .play-btn::after { content: ''; border: 9px solid transparent; border-left: 15px solid #fff; margin-left: 4px; }
+  .video-info { padding: 1rem 1.25rem; }
+  .video-info h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; }
+  .video-info p { font-size: 0.8rem; color: var(--muted); margin-top: 0.3rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img class="site-logo" src="" alt="DJ Riddim Ridder">
+    <div class="nav-logo-text">DJ Riddim<span>Ridder</span></div>
+  </a>
+  <button class="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pages/events.html">Events</a></li>
+    <li><a href="pages/music.html">Music</a></li>
+    <li><a href="pages/contact.html">Contact</a></li>
+    <li><a href="pages/book.html" class="nav-book">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="yt-iframe-wrap">
+    <iframe src="https://www.youtube.com/embed/_ItZ3o6Amyc?autoplay=1&loop=1&playlist=_ItZ3o6Amyc&mute=1&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="hero-overlay" style="position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(6,6,6,0.2) 0%,rgba(6,6,6,0.05) 40%,rgba(6,6,6,0.88) 100%);"></div>
+  <div class="hero-content" style="position:relative;z-index:2;">
+    <img class="site-logo hero-logo-badge" src="" alt="DJ Riddim Ridder">
+    <p class="hero-tag">The Official Site of</p>
+    <h1 class="hero-name">DJ Riddim<br><span>Ridder</span></h1>
+    <p class="hero-sub">Dancehall · Reggae · Soca · Afrobeats</p>
+    <div class="hero-cta">
+      <a href="pages/book.html" class="btn btn-gold">Book the DJ</a>
+      <a href="pages/events.html" class="btn btn-outline">Watch Events</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<div class="about-strip">
+  <div class="reveal">
+    <img class="site-logo" src="" alt="DJ Riddim Ridder">
+  </div>
+  <div class="reveal">
+    <p class="section-label">About</p>
+    <h2 class="section-title">The Sound That Moves You</h2>
+    <div class="divider"></div>
+    <p>DJ Riddim Ridder is one of the most electrifying forces in dancehall, reggae, and Caribbean music. Known for high-energy sets that keep the crowd moving from the first drop to the last beat.</p>
+    <p>Available for private events, club nights, carnivals, festivals, and more — worldwide.</p>
+    <a href="pages/book.html" class="btn btn-gold">Book Now</a>
+  </div>
+</div>
+
+<!-- VIDEOS PREVIEW -->
+<section id="videos">
+  <div class="reveal">
+    <p class="section-label">Live &amp; In The Mix</p>
+    <h2 class="section-title">Dancehall Events</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="video-grid reveal">
+    <div class="video-card">
+      <div class="video-thumb"><p class="video-placeholder-text">Your Event Video<br>Coming Soon</p><div class="play-btn"></div></div>
+      <div class="video-info"><h3>Riddim Takeover Vol. 1</h3><p>Kingston, Jamaica · 2025</p></div>
+    </div>
+    <div class="video-card">
+      <div class="video-thumb"><p class="video-placeholder-text">Your Event Video<br>Coming Soon</p><div class="play-btn"></div></div>
+      <div class="video-info"><h3>Summer Bashment Rave</h3><p>Miami, FL · 2025</p></div>
+    </div>
+    <div class="video-card">
+      <div class="video-thumb"><p class="video-placeholder-text">Your Event Video<br>Coming Soon</p><div class="play-btn"></div></div>
+      <div class="video-info"><h3>Carnival Weekend Set</h3><p>New York, NY · 2025</p></div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:2.5rem;">
+    <a href="pages/events.html" class="btn btn-outline">View All Events</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <img class="site-logo" src="" alt="DJ Riddim Ridder">
+    <div class="footer-logo">DJ Riddim <span>Ridder</span></div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pages/events.html">Events</a></li>
+    <li><a href="pages/music.html">Music</a></li>
+    <li><a href="pages/contact.html">Contact</a></li>
+    <li><a href="pages/book.html">Book</a></li>
+  </ul>
+  <p>© 2025 DJ Riddim Ridder · All Rights Reserved</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

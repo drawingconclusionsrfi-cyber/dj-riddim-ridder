@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — DJ Riddim Ridder</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; max-width: 900px; }
+  .contact-links { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem; }
+  .contact-link { display: flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--text); font-size: 0.95rem; padding: 0.9rem 1.25rem; background: var(--surface); border: 1px solid rgba(255,255,255,0.06); border-radius: 4px; transition: border-color 0.2s, color 0.2s; }
+  .contact-link:hover { border-color: var(--gold); color: var(--gold-light); }
+  .contact-link .cl-icon { font-size: 1.3rem; flex-shrink: 0; }
+  .contact-link-text strong { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.08em; }
+  .contact-link-text small { font-size: 0.78rem; color: var(--muted); }
+  @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img class="site-logo" src="" alt="DJ Riddim Ridder">
+    <div class="nav-logo-text">DJ Riddim<span>Ridder</span></div>
+  </a>
+  <button class="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html" class="nav-book">Book Now</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <span class="section-label">Stay Connected</span>
+  <h1 class="section-title">Contact</h1>
+</div>
+
+<section style="background: var(--black);">
+  <div class="contact-grid">
+    <!-- Links side -->
+    <div class="reveal">
+      <p style="color:var(--muted); line-height:1.8; margin-bottom:0.5rem;">
+        Follow the movement. Connect on social, reach out directly, or drop your info below and we'll be in touch.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:djriddimridder@email.com" class="contact-link">
+          <span class="cl-icon">✉️</span>
+          <div class="contact-link-text">
+            <strong>Email</strong>
+            <small>djriddimridder@email.com</small>
+          </div>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="contact-link">
+          <span class="cl-icon">📸</span>
+          <div class="contact-link-text">
+            <strong>Instagram</strong>
+            <small>@DJRiddimRidder</small>
+          </div>
+        </a>
+        <a href="https://youtube.com" target="_blank" class="contact-link">
+          <span class="cl-icon">▶️</span>
+          <div class="contact-link-text">
+            <strong>YouTube</strong>
+            <small>DJ Riddim Ridder Channel</small>
+          </div>
+        </a>
+        <a href="https://soundcloud.com" target="_blank" class="contact-link">
+          <span class="cl-icon">🎶</span>
+          <div class="contact-link-text">
+            <strong>SoundCloud</strong>
+            <small>Mixes &amp; Sets</small>
+          </div>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="contact-link">
+          <span class="cl-icon">📘</span>
+          <div class="contact-link-text">
+            <strong>Facebook</strong>
+            <small>DJ Riddim Ridder</small>
+          </div>
+        </a>
+        <a href="https://tiktok.com" target="_blank" class="contact-link">
+          <span class="cl-icon">🎵</span>
+          <div class="contact-link-text">
+            <strong>TikTok</strong>
+            <small>@DJRiddimRidder</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Form side -->
+    <div class="reveal">
+      <form data-form="contact">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>Phone (optional)</label>
+          <input type="tel" name="phone" placeholder="+1 (000) 000-0000">
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <select name="subject">
+            <option>General Inquiry</option>
+            <option>Booking Request</option>
+            <option>Press / Media</option>
+            <option>Collaboration</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" placeholder="What's on your mind?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%; font-size:1rem;">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <img class="site-logo" src="" alt="DJ Riddim Ridder">
+    <div class="footer-logo">DJ Riddim <span>Ridder</span></div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html">Book</a></li>
+  </ul>
+  <p>© 2025 DJ Riddim Ridder · All Rights Reserved</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
